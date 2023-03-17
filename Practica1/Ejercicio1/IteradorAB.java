@@ -1,4 +1,4 @@
-package Practica_1.Ejercicio1;
+package Practica1.Ejercicio1;
 
 public class IteradorAB {
   public static void main(String[] args) {

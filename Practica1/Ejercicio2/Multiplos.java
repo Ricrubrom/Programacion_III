@@ -1,4 +1,4 @@
-package Practica_1.Ejercicio2;
+package Practica1.Ejercicio2;
 
 public class Multiplos {
   public static void main(String[] args) {
