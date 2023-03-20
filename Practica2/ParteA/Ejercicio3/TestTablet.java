@@ -1,4 +1,4 @@
-package Practica1.Ejercicio3;
+package Practica2.ParteA.Ejercicio3;
 
 public class TestTablet {
   public static void main(String[] args) {

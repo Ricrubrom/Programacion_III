@@ -1,11 +1,10 @@
-package Practica1.Ejercicio3;
+package Practica2.ParteB.Ejercicio1;
 
-public class Tablet {
+public abstract class Mobile {
   private String marca;
   private String OS;
   private String modelo;
   private double costo;
-  private float pulgadas;
   
   public String getMarca() {
     return marca;
@@ -38,26 +37,19 @@ public class Tablet {
   public void setCosto(double costo) {
     this.costo = costo;
   }
+
   
-  public float getPulgadas() {
-    return pulgadas;
-  }
-  
-  public void setPulgadas(float pulgadas) {
-    this.pulgadas = pulgadas;
-  }
-  
-  public Tablet(String marca, String OS, String modelo, double costo, float pulgadas) {
+  public Mobile(String marca, String OS, String modelo, double costo) {
     this.marca = marca;
     this.OS = OS;
     this.modelo = modelo;
     this.costo = costo;
-    this.pulgadas = pulgadas;
   }
   
-  public String devolverDatos() {
-    return "Marca: " + this.marca + " \nOS: " + this.OS + " \nModelo: " + this.modelo + " \nCosto: " + this.costo + " \nPulgadas: " + this.pulgadas;
-    
+  public String toString() {
+    return "Marca: " + this.marca + " \nOS: " + this.OS + " \nModelo: " + this.modelo + " \nCosto: " + this.costo;
+
   }
 
+  public abstract boolean equals(Mobile mobile);
 }
