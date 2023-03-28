@@ -1,7 +1,6 @@
 package Practica3.ParteB.Ejercicio2;
 
 import Practica3.Source.ListaGenerica.ListaGenericaEnlazada;
-import Practica3.Source.ListaGenerica.Pila;
 
 public class PruebaListaGenerica {
   public static void main(String[] args) {
