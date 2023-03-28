@@ -1,4 +1,4 @@
-package Practica3.Source;
+package Practica3.Source.ListaDeEnteros;
 
 /**
  * La clase ListaDeEnterosConArreglos es una ListaDeEnteros con capacidad fija y
