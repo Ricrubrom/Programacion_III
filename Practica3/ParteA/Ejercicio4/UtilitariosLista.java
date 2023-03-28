@@ -3,7 +3,7 @@ package Practica3.ParteA.Ejercicio4;
 import Practica3.Source.ListaDeEnterosEnlazada;
 
 public class UtilitariosLista {
-  public ListaDeEnterosEnlazada mergeSort(ListaDeEnterosEnlazada lista) {
+  public static ListaDeEnterosEnlazada mergeSort(ListaDeEnterosEnlazada lista) {
     if (lista.tamanio() <= 1) {
       return lista;
     }
@@ -24,27 +24,27 @@ public class UtilitariosLista {
     return merge(izq, der);
   }
   
-  private ListaDeEnterosEnlazada merge(ListaDeEnterosEnlazada izq, ListaDeEnterosEnlazada der) {
-    ListaDeEnterosEnlazada resultado = new ListaDeEnterosEnlazada();
-    izq.comenzar();
-    der.comenzar();
-    while (!izq.fin() && !der.fin()) {
-      Integer datoIzq = izq.proximo();
-      Integer datoDer = der.proximo();
-      if (datoIzq < datoDer) {
-        resultado.agregarFinal(datoIzq);
-        resultado.agregarFinal(datoDer);
-      } else {
-        resultado.agregarFinal(datoDer);
-        resultado.agregarFinal(datoIzq);
+    private static ListaDeEnterosEnlazada merge(ListaDeEnterosEnlazada izq, ListaDeEnterosEnlazada der) {
+        der.comenzar();
+        izq.comenzar();
+        ListaDeEnterosEnlazada resultado = new ListaDeEnterosEnlazada();
+        while (!izq.esVacia() && !der.esVacia()) {
+          if (izq.elemento(0) < der.elemento(0)) {
+            resultado.agregarFinal(izq.elemento(0));
+            izq.eliminarEn(0);
+          } else {
+            resultado.agregarFinal(der.elemento(0));
+            der.eliminarEn(0);
+          }
+        }
+        while (!der.esVacia()) {
+          resultado.agregarFinal(der.elemento(0));
+          der.eliminar(der.elemento(0));
+        }
+        while (!izq.esVacia()) {
+          resultado.agregarFinal(izq.elemento(0));
+          izq.eliminar(izq.elemento(0));
+        }
+        return resultado;
       }
-    }
-    while (!izq.fin()) {
-      resultado.agregarFinal(izq.proximo());
-    }
-    while (!der.fin()) {
-      resultado.agregarFinal(der.proximo());
-    }
-    return resultado;
-  }
 }

@@ -8,7 +8,16 @@ public class TestOrdenamientos {
     ListaDeEnterosEnlazada listaO = new ListaDeEnterosEnlazada();
     listaO.agregarFinal(103);
     listaO.agregarFinal(2);
-    listaO.agregarFinal(13);
+    listaO.agregarFinal(13123);
+    listaO.agregarFinal(1015413);
+    listaO.agregarFinal(2541);
+    listaO.agregarFinal(151233);
+    listaO.agregarFinal(10412453);
+    listaO.agregarFinal(2123);
+    listaO.agregarFinal(11243);
+    listaO.agregarFinal(123103);
+    listaO.agregarFinal(5122);
+    listaO.agregarFinal(1563243);
     listaO.comenzar();
     /*listaO = listaO.ordenar();
     ListaDeEnterosEnlazada lista = new ListaDeEnterosEnlazada();
@@ -25,8 +34,7 @@ public class TestOrdenamientos {
     while (!listaFinal.fin()) {
       System.out.println(listaFinal.proximo());
     }*/
-    UtilitariosLista util = new UtilitariosLista();
-    ListaDeEnterosEnlazada lista = util.mergeSort(listaO);
+    ListaDeEnterosEnlazada lista = UtilitariosLista.mergeSort(listaO);
     lista.comenzar();
     while (!lista.fin()) {
       System.out.println(lista.proximo());
