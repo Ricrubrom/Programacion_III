@@ -1,27 +1,27 @@
 package Practica3.Source.ListaGenerica;
 
 public class Pila<T>{
-  private ListaGenericaEnlazada<T> lista;
+  private ListaGenericaEnlazada<T> pila;
 
   public Pila() {
-    lista = new ListaGenericaEnlazada<T>();
+    pila = new ListaGenericaEnlazada<T>();
   }
 
   public void apilar(T dato) {
-    lista.agregarInicio(dato);
+    pila.agregarInicio(dato);
   }
 
   public T desapilar() {
-    T dato = lista.elemento(0);
-    lista.eliminarEn(0);
+    T dato = pila.elemento(0);
+    pila.eliminarEn(0);
     return dato;
   }
 
   public T tope() {
-    return lista.elemento(0);
+    return pila.elemento(0);
   }
 
   public boolean esVacia() {
-    return lista.esVacia();
+    return pila.esVacia();
   }
 }
