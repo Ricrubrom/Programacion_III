@@ -4,7 +4,7 @@ import Practica3.Source.ListaGenerica.Pila;
 
 public class TestBalanceo {
   public static void main(String[] args) {
-    String cadena = "";
+    String cadena = "[()]";
     System.out.println(balanceo(cadena));
   }
   
@@ -14,14 +14,14 @@ public class TestBalanceo {
     Pila<Character> pila = new Pila<Character>();
     for (int i = 0; i < cadena.length(); i++) {
       char car = cadena.charAt(i);
-      if (car == '(' || car == '{' || car == '[')
+      if ((car == '(') || (car == '{') || (car == '['))
         pila.apilar(car);
-      else if (car == ')' || car == '}' || car == ']') {
+      else if ((car == ')') || (car == '}') || (car == ']')) {
         if (pila.esVacia()) {
           return false;
         }
         char dato = pila.desapilar();
-        if (!((car == ')' && dato == '(') || (car == '}' && dato == '{') || (car == ']' && dato == '[')))
+        if (!((car == ')' && (dato == '(')) || ((car == '}') && (dato == '{')) || ((car == ']') && (dato == '['))))
           return false;
       }
     }
