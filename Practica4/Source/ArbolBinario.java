@@ -187,7 +187,6 @@ public boolean esCompleto() {
 		ArbolBinario<T> arbol = null;
 		Cola<ArbolBinario<T>> cola = new Cola<ArbolBinario<T>>();
 		cola.encolar(this);
-		int lvl = 0;
 		cola.encolar(null);
 		while (!cola.esVacia()) {
 			arbol = cola.desencolar();
@@ -200,7 +199,6 @@ public boolean esCompleto() {
 				}
 			} 
 			else if (!cola.esVacia()) {
-					lvl++;
 					cola.encolar(null);
 			}
 		}
