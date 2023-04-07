@@ -184,7 +184,26 @@ public boolean esCompleto() {
 
 
 	public void recorridoPorNiveles() {
-		
+		ArbolBinario<T> arbol = null;
+		Cola<ArbolBinario<T>> cola = new Cola<ArbolBinario<T>>();
+		cola.encolar(this);
+		int lvl = 0;
+		cola.encolar(null);
+		while (!cola.esVacia()) {
+			arbol = cola.desencolar();
+			if (arbol!=null){
+				if (arbol.tieneHijoIzquierdo()) {
+					cola.encolar(arbol.getHijoIzquierdo());
+				}	
+				if (arbol.tieneHijoDerecho()) {
+					cola.encolar(arbol.getHijoDerecho());
+				}
+			} 
+			else if (!cola.esVacia()) {
+					lvl++;
+					cola.encolar(null);
+			}
+		}
 	}
 
 	
