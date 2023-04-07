@@ -64,7 +64,7 @@ public class TestArbolBinario {
     listaCaminos = Adivinanza.secuenciaConMasPreguntas2(arbolBinarioB);
     
 		for (int i = 0; i < listaCaminos.tamanio(); i++) {
-			System.out.println(listaCaminos.elemento(i).toString());
+			System.out.println((i+1)+": "+listaCaminos.elemento(i));
 		}
 
   }
