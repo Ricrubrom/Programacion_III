@@ -42,17 +42,21 @@ public class TestArbolBinario {
     System.out.println(Utiles.sumaMaximaHorizontal(arbolBinario));
     System.out.println();
 
-    // ----- arbolBinarioB -----
-    ArbolBinario<String> arbolBinarioB;
-		arbolBinarioB = new ArbolBinario<String>("¿Tiene 4 patas?");
-		ArbolBinario<String> hijoIzquierdoB = new ArbolBinario<String>("¿Se mueve?");
-		hijoIzquierdoB.agregarHijoDerecho(new ArbolBinario<String>("Es una mesa"));
-		ArbolBinario<String> hhijoIzquierdoB = new ArbolBinario<String>("¿Ladra?");
-		hhijoIzquierdoB.agregarHijoIzquierdo(new ArbolBinario<String>("Es un perro"));
-		hhijoIzquierdoB.agregarHijoDerecho(new ArbolBinario<String>("Es un gato"));
-		hijoIzquierdoB.agregarHijoIzquierdo(hhijoIzquierdoB);
+    ArbolBinario<String> arbolBinarioB = new ArbolBinario<String>("¿Tiene 4 patas?");
+    ArbolBinario<String> hijoIzquierdoB = new ArbolBinario<String>("¿Se mueve?");
+    ArbolBinario<String> h = new ArbolBinario<>("¿Es de madera?");
+    ArbolBinario<String> hh = new ArbolBinario<>("¿Es rojo?");
+    hh.agregarHijoDerecho(new ArbolBinario<String>("Sapo"));
+    h.agregarHijoIzquierdo(hh);
+    h.agregarHijoDerecho(new ArbolBinario<String>("MESA"));
+
+    hijoIzquierdoB.agregarHijoDerecho(h);
+    ArbolBinario<String> hhijoIzquierdoB = new ArbolBinario<String>("¿Ladra?");
+    hhijoIzquierdoB.agregarHijoIzquierdo(new ArbolBinario<String>("Es un perro"));
+    hhijoIzquierdoB.agregarHijoDerecho(new ArbolBinario<String>("Es un gato"));
+    hijoIzquierdoB.agregarHijoIzquierdo(hhijoIzquierdoB);
     arbolBinarioB.agregarHijoIzquierdo(hijoIzquierdoB);
-		arbolBinarioB.agregarHijoDerecho(hijoIzquierdoB);
+    arbolBinarioB.agregarHijoDerecho(new ArbolBinario<String>("Es una persona"));
 
 
 
