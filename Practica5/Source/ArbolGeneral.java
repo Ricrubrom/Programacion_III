@@ -119,9 +119,56 @@ public class ArbolGeneral<T> {
 		return lvl;
 	}
 
-	public Integer ancho() {
-		// Falta implementar..
-		return 0;
+	public int ancho() {
+		int maxWidth = Integer.MIN_VALUE;
+		int width = 0;
+		ArbolGeneral<T> arbol = null;
+		Cola<ArbolGeneral<T>> cola = new Cola<ArbolGeneral<T>>();
+		cola.encolar(this);
+		cola.encolar(null);
+		while (!cola.esVacia()) {
+			arbol = cola.desencolar();
+			if (arbol != null) {
+				width++;
+				if (arbol.tieneHijos()) {
+					ListaGenerica<ArbolGeneral<T>> l = arbol.getHijos();
+					l.comenzar();
+					while (!l.fin()) {
+						cola.encolar(l.proximo());
+					}
+				}
+			} else if (!cola.esVacia()) {
+				if (width > maxWidth) {
+					maxWidth = width;
+				}
+				cola.encolar(null);
+				width = 0;
+			}
+		}
+		return maxWidth;
+	}
+
+	public void ImprimirPorNiveles() {
+		ArbolGeneral<T> arbol = null;
+		Cola<ArbolGeneral<T>> cola = new Cola<ArbolGeneral<T>>();
+		cola.encolar(this);
+		cola.encolar(null);
+		while (!cola.esVacia()) {
+			arbol = cola.desencolar();
+			if (arbol != null) {
+				System.out.print(arbol.getDato() + " ");
+				if (arbol.tieneHijos()) {
+					ListaGenerica<ArbolGeneral<T>> l = arbol.getHijos();
+					l.comenzar();
+					while (!l.fin()) {
+						cola.encolar(l.proximo());
+					}
+				}
+			} else if (!cola.esVacia()) {
+				System.out.println();
+				cola.encolar(null);
+			}
+		}
 	}
 
 }

@@ -16,8 +16,10 @@ public class TestArbolGenerico {
 
     System.out.println("Altura del arbol: " + a.altura()); //3
     System.out.println();
-    System.out.println("Existe el numero 6?: " + a.include(1));
+    System.out.println("Existe el numero 6?: " + a.include(6));
     System.out.println();
-    System.out.println("Nivel encontrado: "+a.nivel(9));
+    System.out.println("Nivel encontrado: " + a.nivel(6));
+    System.out.println();
+    System.out.println("Ancho: " + a.ancho());
 }
 }
