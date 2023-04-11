@@ -1,4 +1,4 @@
-package Practica5.ParteB;
+package Practica5.ParteB.Ejercicio1;
 
 import Practica5.Source.*;
 import Practica3.Source.ListaGenerica.*;
@@ -30,7 +30,7 @@ public class Empresa {
 			arbol = cola.desencolar();
       if (arbol != null) {
 				cant++;
-				if (arbol.tieneHijos()) {
+				if (arbol.tieneHijos() && categoriaActual != categoria) {
 					ListaGenerica<ArbolGeneral<Empleado>> l = arbol.getHijos();
 					l.comenzar();
 					while (!l.fin()) {
@@ -105,7 +105,10 @@ public class Empresa {
 
   public void reemplazarPresidente() {
     ArbolGeneral<Empleado> arbol = this.empleados;
-    while (arbol != null) {
+    if (arbol.esHoja()) {
+      arbol=null;
+    }
+    while (true) {
       ListaGenerica<ArbolGeneral<Empleado>> l = arbol.getHijos();
       l.comenzar();
       ArbolGeneral<Empleado> e = l.proximo();

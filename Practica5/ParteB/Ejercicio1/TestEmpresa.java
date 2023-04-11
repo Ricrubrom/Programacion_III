@@ -1,4 +1,4 @@
-package Practica5.ParteB;
+package Practica5.ParteB.Ejercicio1;
 
 import Practica5.Source.*;
 
