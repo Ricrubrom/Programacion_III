@@ -115,6 +115,7 @@ public class Empresa {
           e = e2;
         }
       }
+      e.getDato().setCategoria(e.getDato().getCategoria()-1);
       arbol.setDato(e.getDato());
       if (e.esHoja()) {
         arbol.eliminarHijo(e);;

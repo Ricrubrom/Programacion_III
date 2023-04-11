@@ -1,12 +1,11 @@
 package Practica5.ParteB;
 
 import Practica5.Source.*;
-import Practica3.Source.ListaGenerica.*;
 
 public class TestEmpresa {
   public static void main(String[] args) {
     ArbolGeneral<Empleado> a = new ArbolGeneral<Empleado>(new Empleado("Juan", 10, 1));
-    a.agregarHijo(new ArbolGeneral<Empleado>(new Empleado("Pedro", 50, 2)));
+    a.agregarHijo(new ArbolGeneral<Empleado>(new Empleado("Pedro", 5, 2)));
     a.agregarHijo(new ArbolGeneral<Empleado>(new Empleado("Maria", 15, 2)));
     a.agregarHijo(new ArbolGeneral<Empleado>(new Empleado("Jose", 20, 2)));
     a.getHijos().elemento(1).agregarHijo(new ArbolGeneral<Empleado>(new Empleado("Ana", 10, 3)));
