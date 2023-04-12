@@ -68,7 +68,7 @@ public class TRIE {
 }
 
 private void recorrerArbol(ArbolGeneral<Character> nodo, StringBuilder palabra, ListaGenerica<StringBuilder> lista) {
-    if (nodo.esHoja()) {
+  if (nodo.esHoja()) {
         lista.agregarFinal(new StringBuilder(palabra));
         return;
     }
@@ -76,8 +76,7 @@ private void recorrerArbol(ArbolGeneral<Character> nodo, StringBuilder palabra, 
     hijos.comenzar();
     while (!hijos.fin()) {
         ArbolGeneral<Character> hijo = hijos.proximo();
-        palabra.append(hijo.getDato());
-        recorrerArbol(hijo, palabra, lista);
+        recorrerArbol(hijo, palabra.append(hijo.getDato()), lista);
         palabra.deleteCharAt(palabra.length() - 1);
     }
 }

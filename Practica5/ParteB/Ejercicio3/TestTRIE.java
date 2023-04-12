@@ -12,6 +12,6 @@ public class TestTRIE {
     trie.agregarPalabra("homo");
     trie.ImprimirPorNiveles();
     System.out.println("\n");
-    System.out.println(trie.palabrasQueEmpiezanCon("nashe"));
+    System.out.println(trie.palabrasQueEmpiezanCon("ara"));
   }
 }
