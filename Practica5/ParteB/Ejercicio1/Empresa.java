@@ -1,7 +1,8 @@
 package Practica5.ParteB.Ejercicio1;
 
-import Practica5.Source.*;
-import Practica3.Source.ListaGenerica.*;
+import Classes.Arboles.ArbolGeneral;
+import Classes.Listas.ListaGenerica.*;
+import Classes.Listas.Cola;
 
 public class Empresa {
   private ArbolGeneral<Empleado> empleados;

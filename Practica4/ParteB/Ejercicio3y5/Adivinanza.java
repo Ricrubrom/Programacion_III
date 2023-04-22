@@ -1,9 +1,7 @@
 package Practica4.ParteB.Ejercicio3y5;
 
-import Practica4.Source.ArbolBinario;
-
-
-import Practica3.Source.ListaGenerica.*;
+import Classes.Arboles.ArbolBinario;
+import Classes.Listas.ListaGenerica.*;
 
 public class Adivinanza {
   public static ListaGenericaEnlazada<String> secuenciaConMasPreguntas(ArbolBinario<String> abinario) {

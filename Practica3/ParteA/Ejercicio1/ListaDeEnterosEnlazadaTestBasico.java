@@ -1,6 +1,6 @@
 package Practica3.ParteA.Ejercicio1;
 
-import Practica3.Source.ListaDeEnteros.ListaDeEnterosEnlazada;
+import Classes.Listas.ListaDeEnteros.*;
 
 public class ListaDeEnterosEnlazadaTestBasico {
   public static void main(String[] args) {

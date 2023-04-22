@@ -1,6 +1,6 @@
 package Practica3.ParteB.Ejercicio3;
 
-import Practica3.Source.ListaGenerica.Pila;
+import Classes.Listas.Pila;
 
 public class PilaTest {
   public static void main(String[] args) {

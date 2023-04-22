@@ -1,7 +1,7 @@
 package Practica3.ParteA.Ejercicio2;
 
 import Practica3.ParteA.Ejercicio4.UtilitariosLista;
-import Practica3.Source.ListaDeEnteros.ListaDeEnterosEnlazada;
+import Classes.Listas.ListaDeEnteros.*;
 
 public class TestOrdenamientos {
   public static void main(String[] args) {

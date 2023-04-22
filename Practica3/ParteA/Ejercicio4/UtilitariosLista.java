@@ -1,6 +1,6 @@
 package Practica3.ParteA.Ejercicio4;
 
-import Practica3.Source.ListaDeEnteros.ListaDeEnterosEnlazada;
+import Classes.Listas.ListaDeEnteros.*;
 
 public class UtilitariosLista {
   public static ListaDeEnterosEnlazada mergeSort(ListaDeEnterosEnlazada lista) {

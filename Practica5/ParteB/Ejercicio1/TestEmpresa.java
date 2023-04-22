@@ -1,6 +1,6 @@
 package Practica5.ParteB.Ejercicio1;
 
-import Practica5.Source.*;
+import Classes.Arboles.ArbolGeneral;
 
 public class TestEmpresa {
   public static void main(String[] args) {

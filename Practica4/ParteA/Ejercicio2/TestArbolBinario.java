@@ -1,7 +1,7 @@
 package Practica4.ParteA.Ejercicio2;
 
-import Practica4.Source.ArbolBinario;
-import Practica3.Source.ListaGenerica.*;
+import Classes.Listas.ListaGenerica.*;
+import Classes.Arboles.ArbolBinario;
 import Practica4.ParteB.Ejercicio1_2y4.Utiles;
 import Practica4.ParteB.Ejercicio3y5.Adivinanza;
 

@@ -1,7 +1,7 @@
 package Practica5.ParteB.Ejercicio3;
 
-import Practica3.Source.ListaGenerica.*;
-import Practica5.Source.ArbolGeneral;
+import Classes.Arboles.ArbolGeneral;
+import Classes.Listas.ListaGenerica.*;
 
 public class TRIE {
   private ArbolGeneral<Character> a;

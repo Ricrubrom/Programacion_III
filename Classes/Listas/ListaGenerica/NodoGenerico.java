@@ -1,4 +1,4 @@
-package Practica3.Source.ListaGenerica;
+package Classes.Listas.ListaGenerica;
 /**
  * Esta clase representa un nodo de la lista de enteros enlazada.
  * */

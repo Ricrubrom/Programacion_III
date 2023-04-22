@@ -1,7 +1,7 @@
 package Practica5.ParteB.Ejercicio2;
 
-import Practica5.Source.*;
-import Practica3.Source.ListaGenerica.*;
+import Classes.Arboles.ArbolGeneral;
+import Classes.Listas.ListaGenerica.*;
 
 public class RedDeAguaPotable {
   public static void main(String[] args) {

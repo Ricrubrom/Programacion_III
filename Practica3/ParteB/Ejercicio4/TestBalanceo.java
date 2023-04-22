@@ -1,6 +1,6 @@
 package Practica3.ParteB.Ejercicio4;
 
-import Practica3.Source.ListaGenerica.Pila;
+import Classes.Listas.Pila;
 
 public class TestBalanceo {
   public static void main(String[] args) {

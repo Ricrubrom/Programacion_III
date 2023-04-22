@@ -1,5 +1,5 @@
 package Practica5.ParteA;
-import Practica5.Source.*;
+import Classes.Arboles.ArbolGeneral;
 public class TestArbolGenerico {
 
   public static void main(String[] args){

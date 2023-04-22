@@ -1,6 +1,7 @@
-package Practica4.Source;
+package Classes.Arboles;
 
-import Practica3.Source.ListaGenerica.*;
+import Classes.Listas.Cola;
+import Classes.Listas.ListaGenerica.*;
 
 public class ArbolBinario<T> {
 	private T dato;

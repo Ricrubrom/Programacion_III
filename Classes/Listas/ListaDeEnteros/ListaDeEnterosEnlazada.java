@@ -1,4 +1,4 @@
-package Practica3.Source.ListaDeEnteros;
+package Classes.Listas.ListaDeEnteros;
 
 /**
  * La clase ListaDeEnterosEnlazada es una ListaDeEnteros, donde los elementos de
@@ -21,6 +21,53 @@ public class ListaDeEnterosEnlazada extends ListaDeEnteros {
 
 	/* cantidad de nodos en la lista */
 	private int tamanio;
+	
+	public ListaDeEnterosEnlazada ordenar() {
+		ListaDeEnterosEnlazada ordenada = new ListaDeEnterosEnlazada();
+		ordenada.comenzar();
+		int tamanio = this.tamanio();
+		int minimo = Integer.MAX_VALUE;
+		
+		for (int i = 0; i < tamanio; i++) {
+			if (minimo > this.elemento(i)) {
+				minimo = this.elemento(i);
+			}
+		}
+
+		ordenada.agregarFinal(minimo);
+		while (ordenada.tamanio() != tamanio) {
+			minimo = Integer.MAX_VALUE;
+			for (int i = 0; i < tamanio; i++) {
+				if (minimo > this.elemento(i) && ordenada.elemento(ordenada.tamanio()-1) < this.elemento(i)) {
+					minimo = this.elemento(i);
+				}
+			}
+			ordenada.agregarFinal(minimo);
+		}
+		return ordenada;
+	}
+
+	public ListaDeEnterosEnlazada combinarOrdenado(ListaDeEnterosEnlazada lista) {
+		ListaDeEnterosEnlazada combinadas = new ListaDeEnterosEnlazada();
+		combinadas.comenzar();
+		int i = 0;
+		int j = 0;
+
+		while (i < lista.tamanio() && j < this.tamanio()) {
+			if (lista.elemento(i) < this.elemento(j)) {
+				combinadas.agregarFinal(lista.elemento(i++));
+			} else {
+				combinadas.agregarFinal(this.elemento(j++));
+			}
+		}
+		while (i < lista.tamanio()) {
+			combinadas.agregarFinal(lista.elemento(i++));
+		}
+		while (j < this.tamanio()) {
+			combinadas.agregarFinal(this.elemento(j++));
+		}
+		return combinadas;
+	}
 
 	@Override
 	public void comenzar() {
@@ -183,47 +230,4 @@ public class ListaDeEnterosEnlazada extends ListaDeEnteros {
 	public boolean esVacia() {
 		return this.tamanio() == 0;
 	}
-
-	public ListaDeEnterosEnlazada ordenar() {
-		ListaDeEnterosEnlazada resultado = new ListaDeEnterosEnlazada();
-		this.comenzar();
-		ListaDeEnterosEnlazada aux = new ListaDeEnterosEnlazada();
-		while (!this.fin()) {
-			aux.agregarFinal(this.proximo());
-		}
-		Integer dato = null;
-		while (!aux.esVacia()) {
-			Integer min = 99999999;
-			aux.comenzar();
-			while (!aux.fin()) {
-				dato = aux.proximo();
-				if (dato < min)
-					min = dato;
-			}
-			aux.eliminar(min);
-			resultado.agregarFinal(min);
-		}
-		return resultado;
-	}
-	
-
-
-	public ListaDeEnterosEnlazada combinarOrdenado(ListaDeEnterosEnlazada listaParam) {
-		this.comenzar();
-		listaParam.comenzar();
-		ListaDeEnterosEnlazada resultado = new ListaDeEnterosEnlazada();
-		while (!this.fin()) {
-			resultado.agregarFinal(this.proximo());
-		}
-		while (!listaParam.fin()) {
-			Integer dato = listaParam.proximo();
-			int i = 0;
-			while (i < resultado.tamanio() && dato > resultado.elemento(i)) {
-				i++;
-			}
-			resultado.agregarEn(dato, i);
-		}
-		return resultado;
-	}
-
 }

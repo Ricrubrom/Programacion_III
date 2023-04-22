@@ -1,7 +1,8 @@
 package Practica4.ParteB.Ejercicio1_2y4;
 
-import Practica4.Source.ArbolBinario;
-import Practica3.Source.ListaGenerica.*;
+import Classes.Arboles.ArbolBinario;
+import Classes.Listas.ListaGenerica.*;
+import Classes.Listas.Cola;
 
 public class Utiles {
   public static int sumaMaximaVertical(ArbolBinario<Integer> a, int suma) {
