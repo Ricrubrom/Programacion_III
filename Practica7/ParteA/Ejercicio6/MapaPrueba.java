@@ -47,10 +47,10 @@ public class MapaPrueba {
     ListaGenerica<String> l3 = M.caminoMasCorto("Buenos Aires", "Asunsion");
     System.out.println(l3.toString());
 
-    /*ListaGenerica<String> l4 = M.caminoSinCargarCombustible("Buenos Aires", "Asunsion", 10);
+    ListaGenerica<String> l4 = M.caminoSinCargarCombustible("Buenos Aires", "Asunsion", 10);
     System.out.println(l4.toString());
 
     ListaGenerica<String> l5 = M.caminoConMenorCargaDeCombustible("Buenos Aires", "Asunsion", 10);
-    System.out.println(l5.toString());*/
+    System.out.println(l5.toString());
   }
 }
