@@ -25,6 +25,9 @@ public class GrafoImplMatrizAdy<T> implements Grafo<T> {
 	
 	@Override
 	public void eliminarVertice(Vertice<T> v) {
+		if (maxVertices == 0){
+			System.out.print(' ');
+		}
 		ListaGenerica<Vertice<T>> verticesAux = this.listaDeVertices();
 		verticesAux.comenzar();
 		while (!verticesAux.fin()){
